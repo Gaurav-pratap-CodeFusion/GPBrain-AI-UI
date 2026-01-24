@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GPBrain AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo-text">GPBrain</h2>
+            <button class="icon-btn close-sidebar-btn" id="closeSidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <button class="new-chat-btn" id="newChatBtn">
+                <span class="plus-icon">+</span> New Chat
+            </button>
+
+            <div class="recent-chats">
+                <div class="chat-history-label">Recent</div>
+                <div class="history-item">Previous Conversation...</div>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <p class="powered-by">Powered by GpCodeFusion</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="chat-header">
+            <button class="icon-btn menu-btn" id="menuBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+            </button>
+            <span class="header-title">GPBrain 1.0</span>
+        </header>
+
+        <div id="chatBox" class="chat-container">
+            <div class="message ai welcome-message">
+                <div class="ai-avatar-lg">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h1>Hello, Guest</h1>
+                <p>I am GPBrain. How can I assist you today?</p>
+            </div>
+        </div>
+
+        <div class="input-area-wrapper">
+            <div class="input-container">
+                <div class="input-box">
+                    <textarea id="userInput" placeholder="Message GPBrain..." rows="1"></textarea>
+                    <button onclick="sendMessage()" id="sendBtn" class="send-btn" disabled>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="disclaimer">
+                    GPBrain can make mistakes. Check important info.
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
