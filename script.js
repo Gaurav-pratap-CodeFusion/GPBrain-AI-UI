@@ -124,7 +124,7 @@ async function sendMessage() {
     const typingDiv = showTypingIndicator();
 
     try {
-        const response = await fetch("http://192.168.0.138:8080/api/chat", {
+        const response = await fetch("http://localhost:8080/api/chat", {
             method: "POST",
             headers: { "Content-Type": "text/plain" },
             body: msg
